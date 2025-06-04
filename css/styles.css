@@ -1,0 +1,157 @@
+
+/* formateamos la hoja de estilos del navegador */
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family:sans-serif;
+}
+.container{
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    align-items: center;
+    justify-content: center;
+    row-gap: 1.4rem; /* se aplica siempre en el contenedor padre */
+    
+   
+}
+
+.card {
+    background: rgb(255, 254, 254);
+    height: 11rem;
+    width:35rem;    
+    border-radius: 0.8rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4); /* sombra */
+    transition: transform 0.8s ease, box-shadow 0.8s ease;
+}
+
+.card:hover{
+    transform: scale(1.09); /* Aumenta el tamaño al 109% */
+}
+
+.flex{
+    display: flex;
+
+}
+.margenes-texto-cards{
+    margin: 2rem 2rem 0 2rem;
+}
+
+.m-b-1{
+    margin-bottom: 1rem;
+}
+
+.boton{
+   padding: 0.8rem 1.7rem; /* con esto le ponemos arriba y abajo 0.8rem y 1.7rem a los lados */
+   border-radius: 0.5rem;
+   border: none;
+   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* sombra */
+   cursor: pointer;
+   transition: transform 0.8s ease, box-shadow 0.8s ease;
+}
+
+.boton:hover{
+    transform: scale(1.2); /* Aumenta el tamaño al 109% */
+}
+
+.color-1{
+    color:rgb(232, 76, 76);
+}
+
+.color-2{
+    color: rgba(43, 135, 247, 0.929);
+}
+.color-3{
+    color: rgb(113, 57, 57);
+}
+
+.boton-color-1{
+    background:rgb(232, 76, 76);
+    color: white;
+}
+.boton-color-2{
+    background:  rgba(43, 135, 247, 0.929);
+    color: white;
+}
+.boton-color-3{
+    background:  rgb(113, 57, 57);
+    color: white;
+}
+
+.style-deporte{
+    width: 10rem;
+    height: 10rem;
+    
+
+}
+
+.style-urbano{
+    width: 10rem;
+    height: 10rem;
+    border: white;
+    margin-left: 3rem;
+}
+
+.style-formal{
+    width: 10rem;
+    height: 10rem;
+    border: white;
+    margin-left: 3rem;
+}
+
+@media (max-width: 700px) {
+    .container{
+        height: auto; /* se juasta la altura sola, en el modelo para la web le puse height:100vh; porque queria que las 3 tarjetas estuvieran centradas en la pantalla */
+        margin: 3rem 2rem 3rem 2rem; /* arriba, derecha, abajo, izq */
+    }
+
+    .card {
+        /* poner display flex no tiene sentido, ya que tengo una clase en el mismo div que dice display flex */
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        background: rgb(255, 254, 254);
+        height: 22rem;
+        width:17rem;    
+        border-radius: 0.8rem;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4); /* sombra */
+        transition: transform 0.8s ease, box-shadow 0.8s ease;
+    }
+
+    .style-deporte{
+        width: 9rem;
+        height: 9rem;
+        margin-top: 0.7rem;
+    }
+    
+    .style-urbano{
+        width: 9rem;
+        height: 9rem;
+        border: white;
+        margin-top: 0.7rem;
+        margin-left: -0.3rem;
+    }
+    
+    .style-formal{
+        width: 9rem;
+        height: 9rem;
+        border: white;
+        margin-top: 0.7rem;
+        margin-left: -0.3rem; /* se tuvo que hacer asi para ajustar las imagenes porque no son todas de igual tamaño */
+    }
+
+    .margenes-texto-cards{
+        margin: 2rem 2rem 0 2rem;
+    }
+    
+    .m-b-1{
+        margin-bottom: 1rem;
+    }
+
+    .texto-card{
+        text-align: center;
+    }
+
+}
